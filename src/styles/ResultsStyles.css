@@ -1,0 +1,70 @@
+.results-parent {
+  position:absolute;
+  display:block;
+  width:20rem;
+  height: fit-content;
+  padding:1rem;
+
+  transform: translate(-50%, -50%);
+  left:50%;
+  bottom:-100%;
+  margin:0;
+
+  border-radius: 1rem;
+  align-items: center;
+  
+  transition: bottom 0.2s 1s;
+  opacity:0.98;
+}
+
+.results-text {
+  font-weight: 500;
+}
+
+.results-word {
+  margin-top: -0.5rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.results-streak {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.results-button {
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.results-parent-shown {
+  bottom: 22%;
+}
+
+.bar-parent {
+  display:flex;
+  align-items: center;
+  gap: 0.5rem;
+  width:100%;
+  margin-left: 1rem;
+}
+
+.bar-score {
+  font-weight: 600;
+}
+
+.bar-percentage {
+  position: absolute;
+  left: 3.5rem;
+
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0 0.3rem;
+  height: 1.2rem;
+  border-radius: 0.2rem;
+
+  font-weight: 600;
+}
