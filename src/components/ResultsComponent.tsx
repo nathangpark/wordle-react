@@ -11,7 +11,7 @@ interface Props {
 
 
 const ResultsComponent = ({ word,generateNewWord,show,scores,streak }:Props) => {
-  const [className, setClassName] = useState("results-parent themed-light");
+  const [className, setClassName] = useState("results-parent");
   const maxScore = Math.max(...scores) > 0 ? Math.max(...scores) : 1;
 
   useEffect(() => {
@@ -20,6 +20,7 @@ const ResultsComponent = ({ word,generateNewWord,show,scores,streak }:Props) => 
 
   return (
     <div className={className}>
+      <div className="results-background themed-light"/>
       <div className="results-text">THE WORD WAS</div>
       <div className="results-word">{word}</div>
       <div className="results-streak">{"STREAK: " + streak}</div>

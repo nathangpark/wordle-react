@@ -44,6 +44,49 @@ function App() {
     spacesRef.current.externalKeyPress(key);
   };
 
+  // HANDLES THE COLORS OF THE KEYBOARD AND THE INPUT WORD
+  const handleColors = (input: string[]) => {
+    const USED = '!';
+    let color: Colors[] = [];
+    let tempKeyboardColors = keyboardColors;
+    let tempWord = wordSync;
+    let wordIndex = 0;
+
+    // green check
+    input.forEach((letter: string, index: number) => {
+      if (tempWord.charAt(index) == letter) {
+        color[index] = Colors.Green;
+        tempKeyboardColors[0].push(letter);
+        tempWord = tempWord.substring(0, index) + USED + tempWord.substring(index + 1);
+        input[index] = USED;
+      }
+    });
+
+    // yellow check
+    input.forEach((letter: string, index: number) => {
+      if (tempWord.includes(letter) && tempWord.charAt(index) != USED) {
+        color[index] = Colors.Yellow;
+        tempKeyboardColors[1].push(letter);
+        
+        wordIndex = tempWord.indexOf(letter);
+        tempWord = tempWord.substring(0, wordIndex) + USED + tempWord.substring(wordIndex + 1);
+        input[index] = USED;
+
+        // letter grey if not yellow
+      } else if (letter != USED) {
+        color[index] = Colors.Grey;
+        tempKeyboardColors[2].push(letter);
+      }
+    });
+
+    colorsSync[activeIndex] = color;
+    colorsSync[activeIndex + 1] = [];
+    setKeyboardColors([...tempKeyboardColors]);
+    setColors([...colorsSync]);
+
+    return color;
+  }
+
   useEffect(() => {
     if (activeIndex == -1) setActiveIndex(0);
   }, [activeIndex]);
@@ -54,27 +97,13 @@ function App() {
       wordInput += char.toLowerCase();
     });
 
-    let color: Colors[] = [];
-    let tempKeyboardColors = keyboardColors;
 
+    // if input is not a word, do nothing
     if (!allWords.includes(wordInput)) return false;
-    input.forEach((letter: string, index: number) => {
-      if (wordSync.charAt(index) == letter) {
-        color[index] = Colors.Green;
-        tempKeyboardColors[0].push(letter);
-      } else if (wordSync.includes(letter)) {
-        color[index] = Colors.Yellow;
-        tempKeyboardColors[1].push(letter);
-      } else {
-        color[index] = Colors.Grey;
-        tempKeyboardColors[2].push(letter);
-      }
-    });
 
-    colorsSync[activeIndex] = color;
-    colorsSync[activeIndex + 1] = [];
-    setKeyboardColors([...tempKeyboardColors]);
-    setColors([...colorsSync]);
+
+    let color = handleColors(input);
+    
 
     if (
       color.every((c: Colors) => {

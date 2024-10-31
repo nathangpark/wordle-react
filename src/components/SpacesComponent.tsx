@@ -26,7 +26,6 @@ const SpacesComponent = forwardRef(({ active,onEnter,color }: Props, ref) => {
 
   const keyPress = (key: string) => {
     if (!checkKey(key) || color.length > 1) return;
-    console.log(currentIndex);
 
     switch (key) {
       case "Enter":
