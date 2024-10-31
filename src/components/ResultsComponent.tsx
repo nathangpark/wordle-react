@@ -25,7 +25,7 @@ const ResultsComponent = ({ word,generateNewWord,show,scores,streak }:Props) => 
       <div className="results-word">{word}</div>
       <div className="results-streak">{"STREAK: " + streak}</div>
       {scores.map((score:number, index:number) => (
-        <ResultBarComponent score={index + 1} count={score} percentage={score/maxScore}/>
+        <ResultBarComponent score={index + 1} count={score} percentage={score/maxScore} key={index}/>
       ))}
       <button className="results-button themed-invert"onClick={generateNewWord}>New Word</button>
     </div>

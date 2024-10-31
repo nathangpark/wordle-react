@@ -350,7 +350,6 @@ export const words = [
 	'sight',
 	'since',
 	'skill',
-	'slave',
 	'sleep',
 	'slice',
 	'slide',

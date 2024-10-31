@@ -11,8 +11,7 @@ import "./styles/KeyboardStyles.css";
 import "./styles/SpacesStyles.css";
 import "./styles/ResultsStyles.css";
 
-let wordSync =
-  words[Math.floor(Math.random() * length)].toUpperCase();
+let wordSync = words[Math.floor(Math.random() * length)].toUpperCase();
 let colorsSync: Colors[][] = [[]];
 
 const guesses = 5;
@@ -64,14 +63,19 @@ function App() {
 
     // yellow check
     input.forEach((letter: string, index: number) => {
-      if (tempWord.includes(letter) && tempWord.charAt(index) != USED) {
-        color[index] = Colors.Yellow;
-        tempKeyboardColors[1].push(letter);
-        
+      if (tempWord.includes(letter)){
         wordIndex = tempWord.indexOf(letter);
-        tempWord = tempWord.substring(0, wordIndex) + USED + tempWord.substring(wordIndex + 1);
-        input[index] = USED;
+        if (tempWord.charAt(wordIndex) != USED) {
+          color[index] = Colors.Yellow;
+          tempKeyboardColors[1].push(letter);
+          
+          tempWord = tempWord.substring(0, wordIndex) + USED + tempWord.substring(wordIndex + 1);
+          input[index] = USED;
 
+        } else if (letter != USED) {
+          color[index] = Colors.Grey;
+          tempKeyboardColors[2].push(letter);
+        }
         // letter grey if not yellow
       } else if (letter != USED) {
         color[index] = Colors.Grey;
