@@ -84,3 +84,22 @@ button:focus-visible {
     background-color: #f2f2f2;
   }
 }
+
+@media (max-width: 1200px){
+  :root {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1000px){
+  :root {
+    font-size: 0.8  rem;
+  }
+}
+
+@media (max-width: 800px){
+  :root {
+    font-size: 0.7rem;
+  }
+}
+
