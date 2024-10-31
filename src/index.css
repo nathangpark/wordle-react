@@ -85,21 +85,9 @@ button:focus-visible {
   }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 350px){
   :root {
     font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 1000px){
-  :root {
-    font-size: 0.8  rem;
-  }
-}
-
-@media (max-width: 800px){
-  :root {
-    font-size: 0.7rem;
   }
 }
 

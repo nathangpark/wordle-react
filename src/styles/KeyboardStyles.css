@@ -2,21 +2,26 @@
   position:absolute;
   transform: translate(-50%, 0);
   left: 50%;
-  bottom: 2rem;
+  bottom: 1rem;
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .keyboard-row {
   display:flex;
   gap:0.5rem;
-  width: fit-content;
+  width: 100%;
   margin: auto;
   padding-bottom: 0.5rem;
+  justify-content: center;
 }
 
 .keyboard-key {
   display: flex;
-  min-width: 2.2rem;
-  width:fit-content;
+  min-width: fit-content;
+  max-width: 3rem;
+  width:10%;
   padding-left:0.2rem;
   padding-right:0.2rem;
   height: 4rem;
@@ -25,15 +30,16 @@
   background-color: rgb(223, 223, 223);
   border-radius: 0.3rem;
 
-  font-weight: 700;
-  font-size:1.6rem;
-  color: #213547;
-
   user-select: none; /* Prevent text selection */
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* Internet Explorer/Edge */
 
+
+  font-weight: 700;
+  font-size: clamp(1.2rem,3vw, 1.6rem);
+  
+  color: #213547;
 }
 
 .keyboard-key:hover {
