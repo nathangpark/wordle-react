@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/assets/all_words.tsx","./src/assets/wordlist.tsx","./src/components/keyboardcomponent.tsx","./src/components/resultbarcomponent.tsx","./src/components/resultscomponent.tsx","./src/components/spacescomponent.tsx"],"errors":true,"version":"5.6.3"}

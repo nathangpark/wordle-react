@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
-import { allWords, allWordsLength } from "./assets/all_words";
+import { allWords } from "./assets/all_words";
 import { words,length } from "./assets/wordlist";
 
 import SpacesComponent, { Colors } from "./components/SpacesComponent";
