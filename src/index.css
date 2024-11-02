@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   overflow:hidden;
+  font-size: clamp(0.2em,calc(1.5vh + 0.2em),1.1em);
 }
 
 html {
@@ -94,15 +95,4 @@ button:focus-visible {
   }
 }
 
-@media (max-width: 350px){
-  :root {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-height: 800px){
-  :root {
-    font-size: 0.8rem;
-  }
-}
 
