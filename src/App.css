@@ -1,8 +1,8 @@
 #root {
   position:relative;
-  width: 100%;
-  height: 100%;
-  transform: translateY(-50px);
+  width: 100svw;
+  height: 100svh;
+  transform: translateY(-1svh);
   max-width: 1280px;
   margin: 0 auto;
   padding: 0rem;
@@ -10,7 +10,7 @@
 }
 
 .title {
-  margin-top: 6rem;
+  margin-top: 6svh;
   margin-bottom: 1rem
 }
 
