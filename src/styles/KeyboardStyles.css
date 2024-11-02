@@ -1,8 +1,8 @@
 .keyboard-parent {
-  position:absolute;
-  transform: translate(-50%, -40%);
+  position:fixed;
+  transform: translate(-50%,-130%);
   left: 50%;
-  bottom: 0rem;
+  top: 100svh;
   width: 90%;
   padding-left: 5%;
   padding-right: 5%;
