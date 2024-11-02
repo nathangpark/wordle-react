@@ -7,13 +7,13 @@
 
   transform: translate(-50%, -50%);
   left:50%;
-  bottom:-100%;
+  top:150%;
   margin:0;
 
   border-radius: 1rem;
   align-items: center;
   
-  transition: bottom 0.2s 1s;
+  transition: top 0.2s 1s;
 
   overflow:hidden
 }
@@ -54,7 +54,7 @@
 }
 
 .results-parent-shown {
-  bottom: 15%;
+  top: 35vh;
 }
 
 .bar-parent {
