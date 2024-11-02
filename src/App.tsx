@@ -101,13 +101,10 @@ function App() {
       wordInput += char.toLowerCase();
     });
 
-
     // if input is not a word, do nothing
     if (!allWords.includes(wordInput)) return false;
 
-
     let color = handleColors(input);
-    
 
     if (
       color.every((c: Colors) => {
