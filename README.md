@@ -11,3 +11,4 @@ Features include:
 - Virtual keyboard
 - Display scaling
 
+Play [here](https://nathangpark.github.io/wordle-react/)!
